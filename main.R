@@ -9,6 +9,9 @@ library(ggplot2)
 rekap = data.frame(waktu = NA,
   		   benar = NA)
 
+# set indeks awal
+ikang = 1
+
 # panggil soal
 source("soal.R")
 
@@ -55,23 +58,39 @@ mulai = function(){
   if(is.na(n_penjumlahan) | n_penjumlahan <= 0) {
      n_penjumlahan = 1
      cat("Karena input banyaknya soal penjumlahan salah, maka soalnya hanya ada 1.\n")
+     Sys.sleep(4)
      }
   
   if(is.na(n_pengurangan) | n_pengurangan <= 0){
      n_pengurangan = 1
      cat("Karena input banyaknya soal pengurangan salah, maka soalnya hanya ada 1.\n")
+     Sys.sleep(4)
      }
   
   if(is.na(n_perkalian) | n_perkalian <= 0){
      n_perkalian = 1
      cat("Karena input banyaknya soal perkalian salah, maka soalnya hanya ada 1.\n") 
+     Sys.sleep(4)
      }
 
   if(is.na(n_pembagian) | n_pembagian <= 0){
      n_pembagian = 1
      cat("Karena input banyaknya soal pembagian salah, maka soalnya hanya ada 1.\n")
+     Sys.sleep(4)
      }
-
+  
   # bersiap untuk memulai
   hitung_mundur()
+
+  # kita mulai penjumlahan dulu
+  for(i in 1:n_penjumlahan){
+    rekap[ikang,] = penjumlahan()
+    ikang = ikang + 1
+    }
+  # loop pengurangan
+  for(i in 1:n_pengurangan){
+    rekap[ikang,] = pengurangan()
+    ikang = ikang + 1
+    }
+  return(rekap)
 }
