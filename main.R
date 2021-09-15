@@ -46,7 +46,7 @@ mulai = function(){
   cat("\n")
   
   # kasih jeda dulu  
-  gimmick()
+  gimmick_1()
 
   # cek apakah yang diinput integer
   n_penjumlahan = as.numeric(n_penjumlahan)
@@ -110,5 +110,7 @@ mulai = function(){
                  rep("Pembagian",n_pembagian)
                 )
 
+  # kasih gimmick lagi
+  gimmick_2()
   return(rekap)
 }

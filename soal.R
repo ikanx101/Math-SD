@@ -116,6 +116,7 @@ gimmick_2 = function(){
   cat("Tunggu sebentar, saya sedang mempersiapkan laporan dari jawaban kamu.\n")
   Sys.sleep(2)
   for(i in 1:50){cat(".");Sys.sleep(0.05)}
+  clc()
 }
 
 # fungsi countdown start
