@@ -25,7 +25,7 @@ cat("		        versi 1.1\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\nKamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\nWaktu mulai dihitung sejak setiap soal tampil di layar\ndan berhenti dihitung saat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
-cat("\n\nKetik:\nmulai()\n\nLalu enter untuk memulai.\n")
+cat("\nKetik:\nmulai()\nLalu enter untuk memulai.\n")
 
 mulai = function(){
   # input nama
@@ -92,5 +92,23 @@ mulai = function(){
     rekap[ikang,] = pengurangan()
     ikang = ikang + 1
     }
+  # loop perkalian
+  for(i in 1:n_perkalian){
+    rekap[ikang,] = perkalian()
+    ikang = ikang + 1
+    }
+  # loop pembagian
+  for(i in 1:n_pembagian){
+    rekap[ikang,] = pembagian()
+    ikang = ikang + 1
+    }
+
+  # hasilnya disimpan dalam rekap
+  rekap$tipe = c(rep("Penjumlahan",n_penjumlahan),
+                 rep("Pengurangan",n_pengurangan),
+                 rep("Perkalian",n_perkalian),
+                 rep("Pembagian",n_pembagian)
+                )
+
   return(rekap)
 }
