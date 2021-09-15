@@ -100,3 +100,22 @@ pembagian = function(){
 
 # clear
 clc = function()cat(rep("\n",50))
+
+# gimmick biar disangka mikir
+gimmick = function(){
+  clc()
+  cat("Tunggu sebentar, saya sedang memproses data.\n")
+  Sys.sleep(3)
+  for(i in 1:80){cat(".");Sys.sleep(0.05)}
+  clc()
+}
+
+# fungsi countdown start
+hitung_mundur = function(){
+  clc()
+  cat("Bersiaplah, soal akan segera dimulai dalam:\n")
+  i = 10
+  for(i in 10:1){cat(i);cat("\n");Sys.sleep(1)}
+  Sys.sleep(1)
+  clc()
+ }
