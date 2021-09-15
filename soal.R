@@ -102,12 +102,20 @@ pembagian = function(){
 clc = function()cat(rep("\n",50))
 
 # gimmick biar disangka mikir
-gimmick = function(){
+gimmick_1 = function(){
   clc()
-  cat("Tunggu sebentar, saya sedang memproses data.\n")
-  Sys.sleep(3)
-  for(i in 1:80){cat(".");Sys.sleep(0.05)}
+  cat("Tunggu sebentar, saya sedang mengambil soal dari BANK SOAL NASIONAL.\n")
+  Sys.sleep(2)
+  for(i in 1:50){cat(".");Sys.sleep(0.05)}
   clc()
+}
+
+# gimmick lagi
+gimmick_2 = function(){
+  clc()
+  cat("Tunggu sebentar, saya sedang mempersiapkan laporan dari jawaban kamu.\n")
+  Sys.sleep(2)
+  for(i in 1:50){cat(".");Sys.sleep(0.05)}
 }
 
 # fungsi countdown start
