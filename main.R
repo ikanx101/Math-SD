@@ -112,5 +112,17 @@ mulai = function(){
 
   # kasih gimmick lagi
   gimmick_2()
-  return(rekap)
+  
+  # mulai bikin laporan di sini
+  waktu_total = round(sum(rekap$waktu),3)
+  waktu_rata = round(mean(rekap$waktu),3)
+  benar_total = sum(rekap$benar)
+  total_soal = nrow(rekap)
+  persen_benar_total = round(benar_total * 100 / total_soal,2)
+  pesan_1 = paste0("Halo ",nama,"\nSelamat kamu telah menyelesaikan semua soal yang ada.\n")
+  pesan_2 = paste0("Kamu membutuhkan waktu selama ",waktu_total," detik untuk menyelesaikan semua soal.\nRata-rata, kamu membutuhkan ",waktu_rata," detik untuk menjawab satu soal.\n")
+Kamu berhasil menjawab ",benar_total," buah soal dengan benar dari total ",total_soal," buah soal yang dikerjakan.\n\nSKOR KAMU ADALAH: ",persen_benar_total,"%\n\n")
+  cat(pesan_1)
+
+
 }
