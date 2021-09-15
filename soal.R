@@ -85,3 +85,5 @@ pembagian = function(){
   output = list(waktu,cek)
   return(output)
 }
+
+clc = function()cat(rep("\n",50))
