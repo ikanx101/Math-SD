@@ -1,3 +1,15 @@
+#########################################################
+# Set function yang digunakan utk generate pertanyaan   #
+# Jika ingin mengubah tingkat kesulitan, silakan ubah   #
+# set angka yang hendak dijadikan soal dengan range     #
+# yang lebih besar ya.					#
+#							#
+#							#
+# dibuat dengan R					#
+# ikanx101.com						#
+#########################################################
+
+# penjumlahan
 penambahan = function(){
   bilangan = sample(1:50,2,replace = F)
   kunci = sum(bilangan)
@@ -19,7 +31,7 @@ penambahan = function(){
   return(output)
 }
 
-
+# pengurangan
 pengurangan = function(){
   bilangan = sample(1:50,2,replace = F)
   jumlah = sum(bilangan)
@@ -41,7 +53,7 @@ pengurangan = function(){
   return(output)
 }
 
-
+# perkalian
 perkalian = function(){
   bilangan = sample(1:9,2,replace = F)
   kunci = bilangan[1] * bilangan[2]
@@ -64,7 +76,7 @@ perkalian = function(){
   return(cek)
 }
 
-
+# pembagian
 pembagian = function(){
   bilangan = sample(1:9,2,replace = F)
   c = bilangan[1] * bilangan[2]
@@ -86,4 +98,5 @@ pembagian = function(){
   return(output)
 }
 
+# clear
 clc = function()cat(rep("\n",50))
