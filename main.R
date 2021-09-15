@@ -1,3 +1,4 @@
+# selalu dimulai dari hati yang bersih
 rm(list=ls())
 
 library(dplyr)
@@ -20,4 +21,10 @@ cat("\n\nKetik:\nmulai()\n\nLalu enter untuk memulai.\n")
 
 mulai = function(){
   nama = readline(prompt = "Masukkan nama kamu: ")
+  clc()
+  cat(paste0("Halo ",nama,",\n"))
+  cat("Ada empat kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n")
+  cat("Kamu bisa menentukan berapa soal yang akan dikerjakan di setiap bagian tersebut.\n")
+
+  n_penjumlahan
 }

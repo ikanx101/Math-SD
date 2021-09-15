@@ -10,7 +10,7 @@
 #########################################################
 
 # penjumlahan
-penambahan = function(){
+penjumlahan = function(){
   bilangan = sample(1:50,2,replace = F)
   kunci = sum(bilangan)
   
