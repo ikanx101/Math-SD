@@ -5,12 +5,18 @@ penambahan = function(){
   soal = paste(bilangan,collapse = " + ")
   soal = paste0(soal," = ")
   
+  start = Sys.time()
   jawab = readline(prompt = soal)
   jawab = as.numeric(jawab)
+  end = Sys.time()
+  waktu = end.start
   
   cek = jawab == kunci
+  if(cek == T){cat("Kamu benar")}
+  else {cat("Kamu Salah")}
   
-  return(cek)
+  output = list(waktu,cek)
+  return(output)
 }
 
 
@@ -21,12 +27,18 @@ pengurangan = function(){
   
   soal = paste0(jumlah," - ",bilangan[1]," = ")
   
+  start = Sys.time()
   jawab = readline(prompt = soal)
   jawab = as.numeric(jawab)
+  end = Sys.time()
+  waktu = end.start
   
   cek = jawab == kunci
+  if(cek == T){cat("Kamu benar")}
+  else {cat("Kamu Salah")}
   
-  return(cek)
+  output = list(waktu,cek)
+  return(output)
 }
 
 
@@ -36,10 +48,18 @@ perkalian = function(){
   
   soal = paste0(bilangan[1]," x ",bilangan[2]," = ")
   
+  start = Sys.time()
   jawab = readline(prompt = soal)
   jawab = as.numeric(jawab)
+  end = Sys.time()
+  waktu = end.start
   
   cek = jawab == kunci
+  if(cek == T){cat("Kamu benar")}
+  else {cat("Kamu Salah")}
+  
+  output = list(waktu,cek)
+  return(output)
   
   return(cek)
 }
@@ -52,10 +72,16 @@ pembagian = function(){
   
   soal = paste0(c," : ",bilangan[1]," = ")
   
+  start = Sys.time()
   jawab = readline(prompt = soal)
   jawab = as.numeric(jawab)
+  end = Sys.time()
+  waktu = end.start
   
   cek = jawab == kunci
+  if(cek == T){cat("Kamu benar")}
+  else {cat("Kamu Salah")}
   
-  return(cek)
+  output = list(waktu,cek)
+  return(output)
 }
