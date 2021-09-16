@@ -170,12 +170,14 @@ mulai = function(){
   # bikin plot dulu
   plot = 
     rekap %>%
-    mutate(timeline = cumsum(waktu),
+    mutate(waktu = as.numeric(waktu),
+	   timeline = cumsum(waktu),
 	   cum_benar = cumsum(benar),
 	   cum_skor = cum_benar / nrow(rekap))
   
-  Sys.sleep(5)
-  txtplot(rekap$timeline, rekap$cum_skor, xlab = "Waktu pengerjaan", ylab = "Penambahan skor")
+  Sys.sleep(10)
+  clc()
+  txtplot(plot$timeline, plot$cum_skor, xlab = "Waktu pengerjaan", ylab = "Skor")
   Sys.sleep(7)
 	
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
