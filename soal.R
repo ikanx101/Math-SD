@@ -11,7 +11,7 @@
 
 # penjumlahan
 penjumlahan = function(){
-  bilangan = sample(1:50,2,replace = F)
+  bilangan = sample(25:50,2,replace = F)
   kunci = sum(bilangan)
   
   soal = paste(bilangan,collapse = " + ")
@@ -33,7 +33,7 @@ penjumlahan = function(){
 
 # pengurangan
 pengurangan = function(){
-  bilangan = sample(1:50,2,replace = F)
+  bilangan = sample(25:50,2,replace = F)
   jumlah = sum(bilangan)
   kunci = jumlah - bilangan[1]
   
