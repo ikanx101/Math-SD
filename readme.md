@@ -19,6 +19,8 @@ Selain men-_generate_ soal, program ini nantinya akan memberikan _output_ berupa
 	- Per jenis soal.
 1. Waktu pengerjaan.
 
+Tingkat kesulitan soal bisa kita sesuaikan dengan cara mengubah angka _random_ yang di-_generate_ pada fungsi soal.
+
 ## Cara Kerja
 
 Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
