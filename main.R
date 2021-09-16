@@ -7,7 +7,7 @@ library(ggplot2)
 
 # bikin template utk visualisasi rekap jawaban
 rekap = data.frame(waktu = NA,
-  		   benar = NA)
+		   benar = NA)
 
 # set indeks awal
 ikang = 1
@@ -25,7 +25,7 @@ cat("		        versi 1.1\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\nKamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\nWaktu mulai dihitung sejak setiap soal tampil di layar\ndan berhenti dihitung saat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
-cat("\nKetik:\nmulai()\nLalu enter untuk memulai.\n")
+cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
 
 mulai = function(){
   # input nama
@@ -103,6 +103,9 @@ mulai = function(){
     ikang = ikang + 1
     }
 
+  # kasih jeda biar terlihat dia benar atau tidak 
+  Sys.sleep(1.5)
+
   # hasilnya disimpan dalam rekap
   rekap$tipe = c(rep("Penjumlahan",n_penjumlahan),
                  rep("Pengurangan",n_pengurangan),
@@ -132,11 +135,36 @@ mulai = function(){
 		   benar_total,
 		   " buah soal dengan benar dari total ",
 		   total_soal,
-		   " buah soal yang dikerjakan.\n")
+		   " buah soal\nyang dikerjakan.\n")
   pesan_4 = paste0("SKOR KAMU ADALAH: ",persen_benar_total,"%\n\n")
   cat(pesan_1)
   cat(pesan_2)
   cat(pesan_3)
   cat(pesan_4)
 
+  Sys.sleep(7)
+    
+  kesimpulan = 
+    rekap %>%
+    group_by(tipe) %>%
+    summarise(benar = sum(benar),
+	      n_soal = length(tipe),
+	      waktu_total = sum(waktu),
+	      waktu_mean = mean(waktu)) %>%
+    ungroup() %>%
+    mutate(skor = benar / n_soal * 100,
+	   skor = paste0(round(skor,2),"%")
+	  ) %>%
+    select(tipe,benar,skor,waktu_mean,waktu_total) %>%
+    rename("Pertanyaan" = tipe,
+	   "SKOR" = skor,
+	   "Benar" = benar,
+	   "Waktu Total" = waktu_total,
+	   "Waktu Rata-Rata" = waktu_mean)
+  
+  cat("Berikut adalah laporan detail kamu: \n")
+  return(kesimpulan)
+  cat("\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.")
+  cat("\nUntuk memulai kembali, ketikkan:\n\nmulai()\nLalu tekan ENTER.")
+  cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.")
 }
