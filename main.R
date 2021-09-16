@@ -163,8 +163,10 @@ mulai = function(){
 	   "Waktu Rata-Rata" = waktu_mean)
   
   cat("Berikut adalah laporan detail kamu: \n")
-  return(kesimpulan)
-  cat("\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.")
-  cat("\nUntuk memulai kembali, ketikkan:\n\nmulai()\nLalu tekan ENTER.")
+  print(kesimpulan)
+  cat("\n\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.")
+  cat("=====================================================================\n\n")
+  cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
   cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.")
+  
 }
