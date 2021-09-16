@@ -34,6 +34,3 @@ Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
 
 Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
 
-# _WARNING_
-
-Statusnya masih _on progress_. Akan saya infokan jika sudah _ready to release_.
