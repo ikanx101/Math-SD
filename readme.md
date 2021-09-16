@@ -25,7 +25,9 @@ Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
 
 - _Clone_ repo ini ke dalam _local drive_. 
 - Jalankan __R__ (minimal versi 3.4).
-- Pastikan `library(dplyr)` dan `library(txtplot)` sudah ter-_install_.
+- Pastikan `library(dplyr)` dan `library(txtplot)` sudah ter-_install_. Caranya:
+	- `install.packages("dplyr")`
+	- `install.packages("txtplot")`
 - Ketikkan:
 	- `source("main.R")`
 	-  `mulai()`, tekan __enter__.
