@@ -166,6 +166,14 @@ mulai = function(){
   print(kesimpulan)
   cat("\n\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.\n")
   cat("=====================================================================\n\n")
+  
+  plot = 
+    rekap %>%
+    mutate(timeline = cumsum(waktu),
+	   cum_benar = cumsum(benar),
+	   cum_skor = cum_benar / nrow(rekap))
+  txtplot(rekap$timeline, rekap$cum_skor, xlab = "Waktu pengerjaan", ylab = "Penambahan skor")
+	
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
   cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.\n")
   
