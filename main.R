@@ -3,7 +3,7 @@ rm(list=ls())
 
 # panggil libraries
 library(dplyr)
-library(ggplot2)
+library(txtplot)
 
 # bikin template utk visualisasi rekap jawaban
 rekap = data.frame(waktu = NA,
