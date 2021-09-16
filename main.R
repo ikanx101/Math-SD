@@ -21,7 +21,7 @@ clc()
 # keterangan
 cat("===================================================\n")
 cat("            GENERATOR SOAL BERHITUNG\n")
-cat("		        versi 1.1\n")
+cat("		        versi 2.0\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\nKamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\nWaktu mulai dihitung sejak setiap soal tampil di layar\ndan berhenti dihitung saat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
