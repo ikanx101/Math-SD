@@ -164,9 +164,9 @@ mulai = function(){
   
   cat("Berikut adalah laporan detail kamu: \n")
   print(kesimpulan)
-  cat("\n\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.")
+  cat("\n\nPerhatikan kembali pertanyaan mana yang masih memiliki skor rendah.\n")
   cat("=====================================================================\n\n")
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
-  cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.")
+  cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.\n")
   
 }
