@@ -11,7 +11,7 @@
 
 # penjumlahan
 penjumlahan = function(){
-  bilangan = sample(25:50,2,replace = F)
+  bilangan = sample(100:500,2,replace = F)
   kunci = sum(bilangan)
   
   soal = paste(bilangan,collapse = " + ")
@@ -33,7 +33,7 @@ penjumlahan = function(){
 
 # pengurangan
 pengurangan = function(){
-  bilangan = sample(25:50,2,replace = F)
+  bilangan = sample(100:500,2,replace = F)
   jumlah = sum(bilangan)
   kunci = jumlah - bilangan[1]
   
@@ -104,7 +104,7 @@ clc = function()cat(rep("\n",50))
 # gimmick biar disangka mikir
 gimmick_1 = function(){
   clc()
-  cat("Tunggu sebentar, saya sedang mengambil soal dari BANK SOAL NASIONAL.\n")
+  cat("Tunggu sebentar, Saya sedang mengambil soal dari PLANET SOAL.\n")
   Sys.sleep(2)
   for(i in 1:50){cat(".");Sys.sleep(0.05)}
   clc()
@@ -113,7 +113,7 @@ gimmick_1 = function(){
 # gimmick lagi
 gimmick_2 = function(){
   clc()
-  cat("Tunggu sebentar, saya sedang mempersiapkan laporan dari jawaban kamu.\n")
+  cat("Tunggu sebentar, Saya sedang mempersiapkan laporan dari jawaban kamu.\n")
   Sys.sleep(2)
   for(i in 1:50){cat(".");Sys.sleep(0.05)}
   clc()
