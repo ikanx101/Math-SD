@@ -32,7 +32,7 @@ Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
 	- `install.packages("txtplot")`
 - Ketikkan:
 	- `source("main.R")`
-	-  `mulai()`, tekan __enter__.
+	-  `mulai()` kemudia tekan __enter__.
 
 ## _Contact_
 
