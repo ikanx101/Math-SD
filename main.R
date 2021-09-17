@@ -21,10 +21,10 @@ clc()
 # keterangan
 cat("===================================================\n")
 cat("            GENERATOR SOAL BERHITUNG\n")
-cat("		        versi 2.2\n")
+cat("		     versi 2.3\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\n")
 cat("Kamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\n")
-cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan berhenti dihitung\nsaat soal dijawab.\n")
+cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan\nberhenti dihitung saat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
 cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
@@ -35,7 +35,7 @@ mulai = function(){
   clc()
   cat(paste0("Halo ",nama,",\n"))
   cat("Ada empat kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n")
-  cat("Kamu bisa menentukan berapa soal yang akan dikerjakan di setiap bagian tersebut.\n")
+  cat("Kamu bisa menentukan berapa soal yang akan\ndikerjakan di setiap bagian tersebut.\n")
 
   Sys.sleep(5)
 
@@ -131,15 +131,15 @@ mulai = function(){
 		   "\nSelamat kamu telah menyelesaikan semua soal yang ada.\n")
   pesan_2 = paste0("Kamu membutuhkan waktu selama ",
 		   waktu_total,
-		   " detik untuk menyelesaikan semua soal.\n",
+		   " detik\nuntuk menyelesaikan semua soal.\n",
 		   "Rata-rata, kamu membutuhkan ",
 		   waktu_rata,
-		   " detik untuk menjawab satu soal.\n")
+		   " detik\nuntuk menjawab satu soal.\n\n")
   pesan_3 = paste0("Kamu berhasil menjawab ",
 		   benar_total,
-		   " buah soal dengan benar dari total ",
+		   " buah soal dengan benar\ndari total ",
 		   total_soal,
-		   " buah soal\nyang dikerjakan.\n")
+		   " buah soal yang dikerjakan.\n")
   pesan_4 = paste0("SKOR KAMU ADALAH: ",persen_benar_total,"%\n\n")
   cat(pesan_1)
   cat(pesan_2)
