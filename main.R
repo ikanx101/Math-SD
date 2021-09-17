@@ -187,5 +187,5 @@ mulai = function(){
 	
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
   cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.\n")
-  cat("===============================================================")
+  cat("===============================================================\n\n")
 }
