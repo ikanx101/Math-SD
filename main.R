@@ -21,8 +21,10 @@ clc()
 # keterangan
 cat("===================================================\n")
 cat("            GENERATOR SOAL BERHITUNG\n")
-cat("		        versi 2.0\n")
-cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\nKamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\nWaktu mulai dihitung sejak setiap soal tampil di layar\ndan berhenti dihitung saat soal dijawab.\n")
+cat("		        versi 2.2\n")
+cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\n")
+cat("Kamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\n")
+cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan berhenti dihitung\nsaat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
 cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
@@ -35,14 +37,16 @@ mulai = function(){
   cat("Ada empat kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n")
   cat("Kamu bisa menentukan berapa soal yang akan dikerjakan di setiap bagian tersebut.\n")
 
+  Sys.sleep(5)
+
   # input banyaknya soal perbagian
-  n_penjumlahan = readline(prompt = "Masukkan banyaknya soal penjumlahan yang mau kamu kerjakan: ")
+  n_penjumlahan = readline(prompt = "Masukkan banyaknya soal PENJUMLAHAN yang mau kamu kerjakan: ")
   cat("\n")
-  n_pengurangan = readline(prompt = "Masukkan banyaknya soal pengurangan yang mau kamu kerjakan: ")
+  n_pengurangan = readline(prompt = "Masukkan banyaknya soal PENGURANGAN yang mau kamu kerjakan: ")
   cat("\n")
-  n_perkalian = readline(prompt = "Masukkan banyaknya soal perkalian yang mau kamu kerjakan: ")
+  n_perkalian = readline(prompt = "Masukkan banyaknya soal PERKALIAN yang mau kamu kerjakan: ")
   cat("\n")
-  n_pembagian = readline(prompt = "Masukkan banyaknya soal pembagian yang mau kamu kerjakan: ")
+  n_pembagian = readline(prompt = "Masukkan banyaknya soal PEMBAGIAN yang mau kamu kerjakan: ")
   cat("\n")
   
   # kasih jeda dulu  
@@ -156,6 +160,7 @@ mulai = function(){
 	   skor = paste0(round(skor,2),"%")
 	  ) %>%
     select(tipe,benar,skor,waktu_mean,waktu_total) %>%
+    arrange(desc(benar)) %>%
     rename("Pertanyaan" = tipe,
 	   "SKOR" = skor,
 	   "Benar" = benar,
@@ -182,5 +187,5 @@ mulai = function(){
 	
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
   cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.\n")
-  
+  cat("===============================================================")
 }
