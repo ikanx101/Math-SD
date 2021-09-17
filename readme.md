@@ -34,6 +34,10 @@ Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
 	- `source("main.R")`
 	-  `mulai()` kemudia tekan __enter__.
 
+## Demo
+
+Video demonya bisa dilihat di [sini](https://www.youtube.com/watch?v=1wV5Dyl0boY).
+
 ## _Contact_
 
 Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
