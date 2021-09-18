@@ -31,12 +31,23 @@ Program ini dibuat dengan __R__ versi 3.4 _Command Line Interface_.
 	- `install.packages("dplyr")`
 	- `install.packages("txtplot")`
 - Ketikkan:
-	- `source("main.R")`
-	-  `mulai()` kemudia tekan __enter__.
+	- `source("main.R")` kemudian tekan __enter__.
+	-  `mulai()` kemudian tekan __enter__.
 
 ## Demo
 
 Video demonya bisa dilihat di [sini](https://www.youtube.com/watch?v=1wV5Dyl0boY).
+
+## Digunakan di Android
+
+Program ini bisa digunakan di Android memanfaatkan Linux CLI. Caranya adalah sebagai berikut:
+
+1. _Install_ `UserLand` dari _Google PlayStore_.
+1. Buka `UserLand`, pilih _install_ Ubuntu dengan pilihan `ssh`. Isi _password_ sesuai yang kamu inginkan.
+1. _Install_ __R__ dengan cara sebagai berikut:
+   1. `sudo apt update`
+   1. `sudo apt upgrade`
+   1. `sudo apt install r-base`
 
 ## _Contact_
 
