@@ -104,18 +104,18 @@ clc = function()cat(rep("\n",50))
 # gimmick biar disangka mikir
 gimmick_1 = function(){
   clc()
-  cat("Tunggu sebentar, Saya sedang mengambil soal dari PLANET SOAL.\n")
+  cat("Tunggu sebentar.\nSaya sedang membuat soal.\n")
   Sys.sleep(2)
-  for(i in 1:50){cat(".");Sys.sleep(0.05)}
+  for(i in 1:50){cat("=");Sys.sleep(0.05)}
   clc()
 }
 
 # gimmick lagi
 gimmick_2 = function(){
   clc()
-  cat("Tunggu sebentar, Saya sedang mempersiapkan laporan dari jawaban kamu.\n")
+  cat("Tunggu sebentar.\nSaya sedang mempersiapkan laporan dari jawaban kamu.\n")
   Sys.sleep(2)
-  for(i in 1:50){cat(".");Sys.sleep(0.05)}
+  for(i in 1:50){cat("~");Sys.sleep(0.05)}
   clc()
 }
 
