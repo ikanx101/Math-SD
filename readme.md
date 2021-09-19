@@ -49,6 +49,10 @@ Program ini bisa digunakan di Android memanfaatkan Linux CLI. Caranya adalah seb
    1. `sudo apt upgrade`
    1. `sudo apt install r-base`
 
+## Digunakan di _Google Colab_
+
+Skrip yang ada pada `main.R` dan `soal.R` bisa juga digunakan di Google Colab.
+
 ## _Contact_
 
 Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
