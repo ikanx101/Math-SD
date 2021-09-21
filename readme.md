@@ -57,3 +57,6 @@ Skrip yang ada pada `main.R` dan `soal.R` bisa juga digunakan di Google Colab.
 
 Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
 
+## _Last Update_
+
+21 September 2021
