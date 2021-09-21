@@ -13,7 +13,7 @@ rekap = data.frame(waktu = NA,
 ikang = 1
 
 # panggil soal
-source("soal.R")
+source("https://raw.githubusercontent.com/ikanx101/Math-SD/main/soal.R")
 
 # clear console
 clc()
