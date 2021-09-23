@@ -57,7 +57,7 @@ pengurangan = function(){
 perkalian = function(){
   bilangan = c(NA,NA)
   bilangan[1] = sample(5:9,1)
-  bilangan[2] = sample(20:120,1)
+  bilangan[2] = sample(50:200,1)
   kunci = bilangan[1] * bilangan[2]
   
   soal = paste0(bilangan[1]," x ",bilangan[2]," = ")
@@ -81,7 +81,7 @@ perkalian = function(){
 # pembagian
 pembagian = function(){
   bilangan = c(NA,NA)
-  bilangan[1] = sample(2:10,1)
+  bilangan[1] = sample(4:9,1)
   bilangan[2] = sample(50:500,1)
   c = bilangan[1] * bilangan[2]
   kunci = c / bilangan[1]
