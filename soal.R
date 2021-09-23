@@ -11,7 +11,7 @@
 
 # penjumlahan
 penjumlahan = function(){
-  bilangan = sample(100:500,2,replace = F)
+  bilangan = sample(50:5000,2,replace = F)
   kunci = sum(bilangan)
   
   soal = paste(bilangan,collapse = " + ")
@@ -24,8 +24,8 @@ penjumlahan = function(){
   waktu = end-start
   
   cek = jawab == kunci
-  if(cek == T){cat("Kamu Benar!\n")}
-  else {cat("Kamu Salah...\n")}
+  if(cek == T){cat("Kamu Benar!\n\n")}
+  else {cat("Kamu Salah... Jawaban yang benar adalah: ",kunci,"\n\n")}
   
   output = list(waktu,cek)
   return(output)
@@ -33,7 +33,7 @@ penjumlahan = function(){
 
 # pengurangan
 pengurangan = function(){
-  bilangan = sample(100:500,2,replace = F)
+  bilangan = sample(50:5000,2,replace = F)
   jumlah = sum(bilangan)
   kunci = jumlah - bilangan[1]
   
@@ -46,8 +46,8 @@ pengurangan = function(){
   waktu = end-start
   
   cek = jawab == kunci
-  if(cek == T){cat("Kamu Benar\n")}
-  else {cat("Kamu Salah...\n")}
+  if(cek == T){cat("Kamu Benar\n\n")}
+  else {cat("Kamu Salah... Jawaban yang benar adalah: ",kunci,"\n\n")}
   
   output = list(waktu,cek)
   return(output)
@@ -55,7 +55,9 @@ pengurangan = function(){
 
 # perkalian
 perkalian = function(){
-  bilangan = sample(2:10,2,replace = F)
+  bilangan = c(NA,NA)
+  bilangan[1] = sample(2:9,1)
+  bilangan[2] = sample(50:2000,1)
   kunci = bilangan[1] * bilangan[2]
   
   soal = paste0(bilangan[1]," x ",bilangan[2]," = ")
@@ -67,8 +69,8 @@ perkalian = function(){
   waktu = end-start
   
   cek = jawab == kunci
-  if(cek == T){cat("Kamu Benar!\n")}
-  else {cat("Kamu Salah...\n")}
+  if(cek == T){cat("Kamu Benar!\n\n")}
+  else {cat("Kamu Salah... Jawaban yang benar adalah: ",kunci,"\n\n")}
   
   output = list(waktu,cek)
   return(output)
@@ -78,7 +80,9 @@ perkalian = function(){
 
 # pembagian
 pembagian = function(){
-  bilangan = sample(2:10,2,replace = F)
+  bilangan = c(NA,NA)
+  bilangan[1] = sample(2:10,1)
+  bilangan[2] = sample(50:500,1)
   c = bilangan[1] * bilangan[2]
   kunci = c / bilangan[1]
   
@@ -91,8 +95,8 @@ pembagian = function(){
   waktu = end-start
   
   cek = jawab == kunci
-  if(cek == T){cat("Kamu Benar!\n")}
-  else {cat("Kamu Salah...\n")}
+  if(cek == T){cat("Kamu Benar!\n\n")}
+  else {cat("Kamu Salah... Jawaban yang benar adalah: ",kunci,"\n\n")}
   
   output = list(waktu,cek)
   return(output)
@@ -106,7 +110,7 @@ gimmick_1 = function(){
   clc()
   cat("Tunggu sebentar.\nSaya sedang membuat soal.\n")
   Sys.sleep(2)
-  for(i in 1:50){cat("=");Sys.sleep(0.05)}
+  for(i in 1:50){cat("~");Sys.sleep(0.05)}
   clc()
 }
 

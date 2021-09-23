@@ -20,8 +20,9 @@ clc()
 
 # keterangan
 cat("===================================================\n")
-cat("            GENERATOR SOAL BERHITUNG\n")
-cat("		     versi 2.3\n")
+cat("             KUMOR: KUMON ON R\n")
+cat("      Generator Soal Berhitung ala Kumon\n")
+cat("                versi 3.0\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\n")
 cat("Kamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\n")
 cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan\nberhenti dihitung saat soal dijawab.\n")
