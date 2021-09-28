@@ -36,10 +36,10 @@ mulai = function(){
   clc()
   cat(paste0("Halo ",nama,",\n"))
   cat("Ada empat kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n")
-  cat("Kamu bisa menentukan berapa soal yang akan\ndikerjakan di setiap bagian tersebut.\n")
+  cat("Kamu bisa menentukan berapa soal yang akan\ndikerjakan di setiap bagian tersebut.\n\n")
 
   Sys.sleep(5)
-
+  cat("Kamu hanya bisa mengisikan nilai lebih besar atau sama dengan 0. \n\n")
   # input banyaknya soal perbagian
   n_penjumlahan = readline(prompt = "Masukkan banyaknya soal PENJUMLAHAN yang mau kamu kerjakan: ")
   cat("\n")
