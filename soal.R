@@ -102,6 +102,29 @@ pembagian = function(){
   return(output)
 }
 
+# mengurutkan bilangan
+pengurutan = function(){
+  base = sample(1:99,1)*1000
+  bilangan = sample(base:(base+900),4,replace=F)
+  soal = paste(bilangan,collapse = ", ")
+  soal = paste0("Urutkan bilangan-bilangan berikut dari yang terkecil hingga terbesar.\n\n",soal,"\n\nBerikan KOMA untuk memisahkan jawaban!\n\n")
+
+  kunci = sort(bilangan)
+  kunci = paste(kunci,collapse = ",") %>% as.character()
+  
+  start = Sys.time()
+  jawab = readline(prompt = soal)
+  end = Sys.time()
+  waktu = end - start
+  jawab = gsub(" ","",jawab)
+
+  cek = jawab == kunci
+  if(cek == T){cat("Kamu benar! \n\n")}
+  else {cat("Kamu salah...")}
+  output = list(waktu,cek)
+  return(output)
+}
+
 # clear
 clc = function()cat(rep("\n",50))
 

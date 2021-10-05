@@ -1,3 +1,6 @@
+# surpress warning messages
+options(warn =-1)
+
 # selalu dimulai dari hati yang bersih
 rm(list=ls())
 
@@ -20,9 +23,9 @@ clc()
 
 # keterangan
 cat("===================================================\n")
-cat("             KUMOR: KUMON ON R\n")
+cat("             kumoR: kumon in R\n")
 cat("      Generator Soal Berhitung ala Kumon\n")
-cat("                versi 4.0\n")
+cat("                versi 4.5\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\n")
 cat("Kamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\n")
 cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan\nberhenti dihitung saat soal dijawab.\n")
@@ -33,29 +36,30 @@ cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
 mulai = function(){
   # input nama
   nama = readline(prompt = "Masukkan nama kamu: ")
+  age = readline(prompt = "\nBerapa usia kamu? ")
   clc()
   cat(paste0("Halo ",nama,",\n"))
   cat("Ada lima kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n5. Mengurutkan bilangan\n\n")
   cat("Kamu bisa menentukan berapa soal yang akan\ndikerjakan di setiap bagian tersebut.\n\n")
 
   Sys.sleep(5)
-  cat("Kamu hanya bisa mengisikan nilai lebih besar atau sama dengan 0. \n\n")
+  cat("Isi dulu berapa banyak soal yang\nmau kamu kerjakan ya. \n\n")
   
   # input banyaknya soal
-  # penjumlahan
-  n_penjumlahan = readline(prompt = "Masukkan banyaknya soal PENJUMLAHAN yang mau kamu kerjakan: ")
+  # penjumlahan  
+  n_penjumlahan = readline(prompt = "Berapa banyak soal PENJUMLAHAN yang mau kamu kerjakan: ")
   cat("\n")
   # pengurangan
-  n_pengurangan = readline(prompt = "Masukkan banyaknya soal PENGURANGAN yang mau kamu kerjakan: ")
+  n_pengurangan = readline(prompt = "Berapa banyak soal PENGURANGAN yang mau kamu kerjakan: ")
   cat("\n")
   # perkalian
-  n_perkalian = readline(prompt = "Masukkan banyaknya soal PERKALIAN yang mau kamu kerjakan: ")
+  n_perkalian = readline(prompt = "Berapa banyak soal PERKALIAN yang mau kamu kerjakan: ")
   cat("\n")
   # pembagian
-  n_pembagian = readline(prompt = "Masukkan banyaknya soal PEMBAGIAN yang mau kamu kerjakan: ")
+  n_pembagian = readline(prompt = "Berapa banyak soal PEMBAGIAN yang mau kamu kerjakan: ")
   cat("\n")
   # pengurutan
-  n_pengurut = readline(prompt = "Masukkan banyaknya soal MENGURUTKAN BILANGAN yang hendak kamu kerjakan: ")
+  n_pengurut = readline(prompt = "Berapa banyak soal MENGURUTKAN BILANGAN yang hendak kamu kerjakan: ")
   cat("\n")
   
   clc()
@@ -147,6 +151,14 @@ mulai = function(){
     dummy = dummy + 1
     }
 
+  # loop pengurutan
+  dummy = 1
+  while(dummy <= n_pengurut){
+    rekap[ikang,] = pengurutan()
+    ikang = ikang + 1
+    dummy = dummy + 1
+    }
+
   # kasih jeda biar terlihat dia benar atau tidak 
   Sys.sleep(1.5)
 
@@ -154,7 +166,8 @@ mulai = function(){
   rekap$tipe = c(rep("Penjumlahan",n_penjumlahan),
                  rep("Pengurangan",n_pengurangan),
                  rep("Perkalian",n_perkalian),
-                 rep("Pembagian",n_pembagian)
+                 rep("Pembagian",n_pembagian),
+                 rep("Mengurutkan",n_pengurut)
                 )
 
   # kasih gimmick lagi
