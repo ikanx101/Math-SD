@@ -4,7 +4,7 @@ Program untuk edukasi anak SD.
 
 ## Latar Belakang
 
-Anak SD di kelas 3 - 4 diharapkan sudah bisa mengerjakan soal penambahan, pengurangan, perkalian, dan pembagian yang sederhana. Untuk itu, mereka perlu mendapatkan latihan soal yang cukup. 
+Anak SD di kelas 3 - 4 diharapkan sudah bisa mengerjakan soal penambahan, pengurangan, perkalian, dan pembagian yang sederhana serta mengurutkan bilangan. Untuk itu, mereka perlu mendapatkan latihan soal yang cukup. 
 
 Buku latihan yang tersedia saat ini masih terbatas dalam hal jenis dan banyaknya soal. Kadang orang tua tidak memiliki cukup waktu untuk membuat soal latihan yang banyak.
 
@@ -59,4 +59,9 @@ Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
 
 ## _Last Update_
 
-21 September 2021
+5 Oktober 2021 15:32 WIB
+
+_Updates_
+
+1. Tambahan soal mengurutkan bilangan.
+1. Mengakomodir jika __tidak mau mengerjakan__ bagian soal tertentu.
