@@ -105,7 +105,7 @@ pembagian = function(){
 # mengurutkan bilangan
 pengurutan = function(){
   base = sample(1:99,1)*1000
-  bilangan = sample(base:(base+900),4,replace=F)
+  bilangan = sample((base-100):(base+900),5,replace=F)
   soal = paste(bilangan,collapse = ", ")
   soal = paste0("Urutkan bilangan-bilangan berikut dari yang terkecil hingga terbesar.\n\n",soal,"\n\nBerikan KOMA untuk memisahkan jawaban!\n\n")
 
@@ -120,7 +120,31 @@ pengurutan = function(){
 
   cek = jawab == kunci
   if(cek == T){cat("Kamu benar! \n\n")}
-  else {cat("Kamu salah...")}
+  else {cat("Kamu salah...\n\n")}
+  output = list(waktu,cek)
+  return(output)
+}
+
+# faktorisasi prima
+source("fakto.R")
+faktorisasi = function(){
+  bil = sample(8:99,1,replace = T)
+  kunci = faktorin(bil)
+  kunci = paste(kunci,collapse = ",")
+  soal = paste0("Berapa FAKTOR PRIMA dari: ",bil,"\n\nJawab dengan KOMA sebagai pemisah antar bilangan.\n\n")  
+  
+  start = Sys.time()
+  jawab = readline(prompt = soal)
+  jawab = gsub(" ","",jawab)
+  jawab = unlist(strsplit(jawab,split = ","))
+  jawab = sort(jawab)
+  jawab = paste(jawab,collapse = ",")
+  end = Sys.time()
+  waktu = end - start
+
+  cek = jawab == kunci
+  if(cek == T){cat("Kamu benar! \n\n")}
+  else{cat("Kamu salah. Jawabannya adalah:\n");cat(kunci);cat("\n\n")}
   output = list(waktu,cek)
   return(output)
 }

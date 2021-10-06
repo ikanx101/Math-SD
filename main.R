@@ -25,9 +25,9 @@ clc()
 cat("===================================================\n")
 cat("             kumoR: kumon in R\n")
 cat("      Generator Soal Berhitung ala Kumon\n")
-cat("                versi 4.5\n")
+cat("                versi 5.0\n")
 cat("\nSelamat datang di program ini. Program ini bertujuan\nuntuk membuat soal hitung-hitungan untuk anak SD kelas 2 - 4.\n")
-cat("Kamu bisa menentukan berapa banyak soal penambahan, pengurangan,\nperkalian, dan pembagian yang akan dikerjakan.\n")
+cat("Kamu bisa menentukan berapa banyak soal yang akan dikerjakan per bagiannya.\n")
 cat("Waktu mulai dihitung sejak setiap soal tampil di layar dan\nberhenti dihitung saat soal dijawab.\n")
 cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
@@ -39,7 +39,7 @@ mulai = function(){
   age = readline(prompt = "\nBerapa usia kamu? ")
   clc()
   cat(paste0("Halo ",nama,",\n"))
-  cat("Ada lima kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n5. Mengurutkan bilangan\n\n")
+  cat("Ada ENAM kategori soal, yakni:\n1. Penjumlahan\n2. Pengurangan\n3. Perkalian\n4. Pembagian\n5. Mengurutkan bilangan\n6. Faktorisasi bilangan\n\n")
   cat("Kamu bisa menentukan berapa soal yang akan\ndikerjakan di setiap bagian tersebut.\n\n")
 
   Sys.sleep(5)
@@ -61,6 +61,8 @@ mulai = function(){
   # pengurutan
   n_pengurut = readline(prompt = "Berapa banyak soal MENGURUTKAN BILANGAN yang hendak kamu kerjakan: ")
   cat("\n")
+  # n faktorisasi
+  n_faktorisasi = readline(prompt = "Berapa banyak soal FAKTORISASI yang hendak kamu kerjakan: ")
   
   clc()
 
@@ -70,7 +72,8 @@ mulai = function(){
   n_pembagian = as.numeric(n_pembagian)
   n_perkalian = as.numeric(n_perkalian)
   n_pengurut = as.numeric(n_pengurut)
-  
+  n_faktorisasi = as.numeric(n_faktorisasi)
+
   # kita set jaring pengaman dulu
   if(is.na(n_penjumlahan) | n_penjumlahan <= 0) {
      n_penjumlahan = 0
@@ -99,14 +102,21 @@ mulai = function(){
   if(is.na(n_pengurut) | n_pengurut <= 0){
      n_pengurut = 0
      cat("Tidak ada soal mengurutkan yang akan dikerjakan.\n\n")
+     Sys.sleep(2)
+     }
+
+  if(is.na(n_faktorisasi) | n_faktorisasi <=0){
+     n_faktorisasi = 0
+     cat("Tidak ada soal faktorisasi yang akan dikerjakan.\n\n")
      Sys.sleep(4)
      }
+
 
   # seandainya tidak ada soal sama sekali yang dikerjakan
   # kita akan paksa agar stop
   # set marker dulu
   marker_1 = sum(n_penjumlahan,n_pengurangan,n_perkalian,n_pembagian,
-                 n_pengurut)
+                 n_pengurut,n_faktorisasi)
   # proses stop
   if(marker_1 == 0){
     cat("TIDAK ADA SOAL SAMA SEKALI YANG DIKERJAKAN\n\n")
@@ -159,15 +169,24 @@ mulai = function(){
     dummy = dummy + 1
     }
 
+  # loop faktorisasi
+  dummy = 1
+  while(dummy <= n_faktorisasi){
+    rekap[ikang,] = faktorisasi()
+    ikang = ikang + 1
+    dummy = dummy + 1
+    }
+
   # kasih jeda biar terlihat dia benar atau tidak 
-  Sys.sleep(1.5)
+  Sys.sleep(2)
 
   # hasilnya disimpan dalam rekap
   rekap$tipe = c(rep("Penjumlahan",n_penjumlahan),
                  rep("Pengurangan",n_pengurangan),
                  rep("Perkalian",n_perkalian),
                  rep("Pembagian",n_pembagian),
-                 rep("Mengurutkan",n_pengurut)
+                 rep("Mengurutkan",n_pengurut),
+		 rep("Faktorisasi",n_faktorisasi)
                 )
 
   # kasih gimmick lagi

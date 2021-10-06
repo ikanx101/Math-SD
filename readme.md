@@ -59,9 +59,15 @@ Untuk diskusi lebih lanjut, silakan hubungi [Ikang](https://ikanx101.com)
 
 ## _Last Update_
 
-5 Oktober 2021 15:32 WIB
+### 5 Oktober 2021 15:32 WIB
 
 _Updates_
 
 1. Tambahan soal mengurutkan bilangan.
 1. Mengakomodir jika __tidak mau mengerjakan__ bagian soal tertentu.
+
+### 6 Oktober 2021 08:05 WIB
+
+_Updates_
+
+1. Tambahan soal faktorisasi bilangan prima.

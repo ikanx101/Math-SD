@@ -1,3 +1,4 @@
+# fungsi tambahan
 faktorin = function(a){
 faktor = c()
 i = 2
