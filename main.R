@@ -33,7 +33,7 @@ cat("\nSelamat mencoba dan semoga menyenangkan!\n")
 cat("===================================================\n")
 cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
 
-mulai = function(){
+# mulai 
   # input nama
   nama = readline(prompt = "Masukkan nama kamu: ")
   age = readline(prompt = "\nBerapa usia kamu? ")
@@ -260,4 +260,3 @@ mulai = function(){
   cat("\nUntuk memulai kembali, ketikkan: mulai()\nLalu tekan ENTER.")
   cat("\n\nUntuk keluar, silakan CLOSE atau ketik q() lalu tekan ENTER.\n")
   cat("===============================================================\n\n")
-}
