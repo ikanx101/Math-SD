@@ -67,12 +67,12 @@ cat("\nKetik:\nmulai()\nLalu tekan ENTER untuk memulai.\n")
   clc()
 
   # cek apakah yang diinput integer
-  n_penjumlahan = as.numeric(n_penjumlahan)
-  n_pengurangan = as.numeric(n_pengurangan)
-  n_pembagian = as.numeric(n_pembagian)
-  n_perkalian = as.numeric(n_perkalian)
-  n_pengurut = as.numeric(n_pengurut)
-  n_faktorisasi = as.numeric(n_faktorisasi)
+  n_penjumlahan = as.numeric(5) # (n_penjumlahan)
+  n_pengurangan = as.numeric(5) # (n_pengurangan)
+  n_pembagian   = as.numeric(1) # (n_pembagian)
+  n_perkalian   = as.numeric(1) # (n_perkalian)
+  n_pengurut    = as.numeric(1) # (n_pengurut)
+  n_faktorisasi = as.numeric(1) # (n_faktorisasi)
 
   # kita set jaring pengaman dulu
   if(is.na(n_penjumlahan) | n_penjumlahan <= 0) {
