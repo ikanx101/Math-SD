@@ -126,7 +126,7 @@ pengurutan = function(){
 }
 
 # faktorisasi prima
-source("fakto.R")
+source("/home/r-environment/fakto.R")
 faktorisasi = function(){
   bil = sample(8:99,1,replace = T)
   kunci = faktorin(bil)
