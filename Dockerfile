@@ -14,3 +14,4 @@ COPY soal.R /home/r-environment/soal.R
 
 # Run the R script
 CMD R -e "source('/home/r-environment/main.R')"
+CMD R -e "mulai()"
