@@ -16,7 +16,7 @@ rekap = data.frame(waktu = NA,
 ikang = 1
 
 # panggil soal
-source("/home/r-environment/soal.R")
+source("/home/soal.R")
 
 # clear console
 clc()
